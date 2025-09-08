@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="'Chat with ' + ${username}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body class="container mt-4">
+
+<h3 th:text="'Chat with ' + ${username}"></h3>
+
+<div class="border p-3 mb-3" style="height: 300px; overflow-y: scroll;">
+    <div th:each="msg : ${messages}">
+        <p th:text="${msg}"></p>
+    </div>
+</div>
+
+<form th:action="@{'/chat/' + ${username} + '/send'}" method="post" class="d-flex">
+    <input type="text" name="message" class="form-control me-2" placeholder="Type a message..." required/>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+<br>
+<a th:href="@{/home}" class="btn btn-secondary">Back to Contacts</a>
+</body>
+</html>
