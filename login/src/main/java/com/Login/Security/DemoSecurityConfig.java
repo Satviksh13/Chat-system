@@ -19,18 +19,18 @@ public class DemoSecurityConfig {
                 .password("{noop}test123")
                 .roles("USER")
                 .build();
-        UserDetails chudel = User.builder()
-                .username("chudel")
+        UserDetails dummyUser = User.builder()
+                .username("dummyUser")
                 .password("{noop}test123")
                 .roles("USER")
                 .build();
-        UserDetails dhuie = User.builder()
-                .username("dhuie")
+        UserDetails admin = User.builder()
+                .username("admin")
                 .password("{noop}test123")
                 .roles("USER")
                 .build();
 
-        return new InMemoryUserDetailsManager(satvik , chudel , dhuie);
+        return new InMemoryUserDetailsManager(satvik , admin , dummyUser);
 
     }
 

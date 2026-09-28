@@ -14,9 +14,9 @@ public class ChatController {
     private static final Map<String, List<String>> chats = new HashMap<>();
 
     static {
-        chats.put("john", new ArrayList<>(Arrays.asList("Hi, I am John!", "How are you?")));
-        chats.put("jane", new ArrayList<>(Arrays.asList("Hey, Jane here.", "What's up?")));
-        chats.put("alex", new ArrayList<>(Arrays.asList("Yo! Alex here.", "Let's catch up.")));
+        chats.put("Satvik", new ArrayList<>(Arrays.asList("Hi, I am Satvik!", "How are you?")));
+        chats.put("Dishika", new ArrayList<>(Arrays.asList("Hey, Dishika here.", "What's up?")));
+        chats.put("Shivansh", new ArrayList<>(Arrays.asList("Yo! shivansh here.", "Let's catch up.")));
     }
 
     @GetMapping("/{username}")
